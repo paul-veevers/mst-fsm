@@ -17,7 +17,7 @@ This is relevant in modern browser UIs because:
 	- lots of business logic is implemented client-side
 	- apps have many different states (loading, error, success, toggles, pagination, etc)
 	- testing (unit, integration, etc) is not great. Each component has it's own logic and states, and are often async. How can you possibly test all the permutations? Current best practice seems to be a UI integration test: generate fake data, render the whole tree for each permutation, snapshot it, then eyeball any difference to spot errors/regressions. Pretty sub-optimal.
-- some recent ecosystem developments potentially make FSM's much more useful:
+- some recent-ish ecosystem developments potentially make FSM's much more useful:
 	- declarative UI (React) where UI is a function of state (view = f(state))
 	- type systems (Typescript, Flow, Mobx State Tree)
 
@@ -38,7 +38,7 @@ The best way to see what I'm talking about is to see the example folders - e.g. 
 And if you're brave have a look inside the lib folder.
 
 ### Conclusions
-Using a FST with MST types and React we're able to achieve:
+Using a FSM with MST types and React we're able to achieve:
 - one-line auto-generation of a state chart diagram that can embed the corresponding rendered UI for each state.
 - one-line test that snapshots all possible permutations of a React tree given a machine, with deterministic fake value generation so that snapshots are consistent on subsequent runs.
 - one-line test that monkey tests your react tree. It starts from initial state, randomly clicks a click-able element to transition to next state, re-renders react tree, and repeats n times. It ensures your UI and machine can never be in an invalid state. It would also be possible to simulate other UI events like input typing, etc.
