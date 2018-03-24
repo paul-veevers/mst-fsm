@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reactTreesForMachine 1`] = `
+Object {
+  "first": <div>
+    first
+     : 
+    1
+    <button
+      onClick={[Function]}
+    >
+      btn
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      btn other
+    </button>
+  </div>,
+  "second": <div>
+    second
+     : 
+    2
+    <button
+      onClick={[Function]}
+    >
+      btn
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      btn other
+    </button>
+  </div>,
+  "third": <div>
+    third
+     : 
+    3
+    <button
+      onClick={[Function]}
+    >
+      btn
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      btn other
+    </button>
+  </div>,
+}
+`;
+
+exports[`stateChartForMachine 1`] = `
+Object {
+  "boxSelectionEnabled": true,
+  "elements": Object {
+    "edges": Array [
+      Object {
+        "classes": "",
+        "data": Object {
+          "id": "first:second",
+          "label": "NEXT",
+          "source": "machine.first",
+          "target": "machine.second",
+        },
+        "grabbable": true,
+        "group": "edges",
+        "locked": false,
+        "position": Object {},
+        "removed": false,
+        "selectable": true,
+        "selected": false,
+      },
+      Object {
+        "classes": "",
+        "data": Object {
+          "id": "second:third",
+          "label": "NEXT",
+          "source": "machine.second",
+          "target": "machine.third",
+        },
+        "grabbable": true,
+        "group": "edges",
+        "locked": false,
+        "position": Object {},
+        "removed": false,
+        "selectable": true,
+        "selected": false,
+      },
+      Object {
+        "classes": "",
+        "data": Object {
+          "id": "third:first",
+          "label": "NEXT",
+          "source": "machine.third",
+          "target": "machine.first",
+        },
+        "grabbable": true,
+        "group": "edges",
+        "locked": false,
+        "position": Object {},
+        "removed": false,
+        "selectable": true,
+        "selected": false,
+      },
+      Object {
+        "classes": "",
+        "data": Object {
+          "id": "$initial:first",
+          "label": "",
+          "source": "machine.$initial",
+          "target": "machine.first",
+        },
+        "grabbable": true,
+        "group": "edges",
+        "locked": false,
+        "position": Object {},
+        "removed": false,
+        "selectable": true,
+        "selected": false,
+      },
+    ],
+    "nodes": Array [
+      Object {
+        "classes": "",
+        "data": Object {
+          "id": "machine.first",
+          "label": "first",
+          "parent": undefined,
+        },
+        "grabbable": true,
+        "group": "nodes",
+        "locked": false,
+        "position": Object {
+          "x": 0,
+          "y": 0,
+        },
+        "removed": false,
+        "selectable": true,
+        "selected": false,
+      },
+      Object {
+        "classes": "",
+        "data": Object {
+          "id": "machine.second",
+          "label": "second",
+          "parent": undefined,
+        },
+        "grabbable": true,
+        "group": "nodes",
+        "locked": false,
+        "position": Object {
+          "x": 0,
+          "y": 0,
+        },
+        "removed": false,
+        "selectable": true,
+        "selected": false,
+      },
+      Object {
+        "classes": "",
+        "data": Object {
+          "id": "machine.third",
+          "label": "third",
+          "parent": undefined,
+        },
+        "grabbable": true,
+        "group": "nodes",
+        "locked": false,
+        "position": Object {
+          "x": 0,
+          "y": 0,
+        },
+        "removed": false,
+        "selectable": true,
+        "selected": false,
+      },
+      Object {
+        "classes": "",
+        "data": Object {
+          "id": "machine.$initial",
+          "label": "$initial",
+          "parent": undefined,
+        },
+        "grabbable": true,
+        "group": "nodes",
+        "locked": false,
+        "position": Object {
+          "x": 0,
+          "y": 0,
+        },
+        "removed": false,
+        "selectable": true,
+        "selected": false,
+      },
+    ],
+  },
+  "hideEdgesOnViewport": undefined,
+  "maxZoom": 1e+50,
+  "minZoom": 1e-50,
+  "motionBlur": undefined,
+  "pan": Object {
+    "x": 0,
+    "y": 0,
+  },
+  "panningEnabled": true,
+  "renderer": Object {
+    "name": "null",
+  },
+  "textureOnViewport": undefined,
+  "userPanningEnabled": true,
+  "userZoomingEnabled": true,
+  "wheelSensitivity": undefined,
+  "zoom": 1,
+  "zoomingEnabled": true,
+}
+`;
